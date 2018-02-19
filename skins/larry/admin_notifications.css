@@ -1,0 +1,59 @@
+.admin_notification_carousel {
+  background-color: #fff;
+  border: 1px solid #333;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.admin_notification_carousel ul {
+  padding: 0;
+  margin: 0;
+}
+
+.admin_notification_carousel .notification_slide {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1em;
+  border: 1px solid #333;
+  visibility: hidden;
+  border: none;
+  display: none;
+  z-index: 200;
+  overflow: auto;
+}
+
+.admin_notification_carousel .notification_slide.current {
+  display: block;
+  z-index: 500;
+  visibility: visible;
+}
+
+.notification_slide.current div.admin_notification {
+  height: 150px;
+}
+
+div.notificationitem .notificationmessage {
+  width: 30em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div.notificationitem .notificationtitle {
+  font-weight: bold;
+  width: 30em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div.notificationitem .notificationactive {
+  font-weight: bold;
+  color: green;
+}
+
+div.notificationitem .notificationdisabled {
+  font-weight: bold;
+  color: red;
+}
