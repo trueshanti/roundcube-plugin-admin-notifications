@@ -6,7 +6,7 @@
  * @license GNU GPLv3+
  * @author Manuel Delgado
  */
-$(document).ready(function(){ 
+$(document).ready(function(){
   if (window.rcmail) {
     if (rcmail.env.action == 'plugin.admin_options.load'){
       rcmail.register_command('plugin.admin_options.edit_notif', function(i) {
@@ -25,7 +25,7 @@ $(document).ready(function(){
         request['_adminnotificationid'] = current_id;
 
         rcmail.http_post('plugin.admin_notification_ack', request, true);
-      }  
+      }
       rcube_webmail.prototype.admin_notifications_mark_all = function() {
         var i, value, request = {}, slides_input = $('.notification_slide input');
         request['_adminnotificationid'] = {};
@@ -35,16 +35,16 @@ $(document).ready(function(){
         }
         request['_adminnotificationclose'] = true;
         rcmail.http_post('plugin.admin_notification_ack', request, true);
-      }    
-      
+      }
+
       rcube_webmail.prototype.admin_notifications_close = function() { $('.admin_notification_carousel').dialog('close'); }
-      
+
       var mWidth = Math.min($(window).width() * 0.85, 500);
       var ntitle = rcmail.gettext('notifications','admin_notifications');
       var slides = $('.notification_slide');
       $('.admin_notification_carousel').show()
         .dialog({modal:true, resizable:false, closeOnEscape:false, width:mWidth, title:ntitle});
-        
+
       rcmail.register_command('plugin.admin_notifications.prev', function() {
           var current = $('.notification_slide.current');
           if (! slides.first().is(current)) {
@@ -76,12 +76,11 @@ $(document).ready(function(){
           rcmail.enable_command('plugin.admin_notifications.next', false);
           rcmail.enable_command('plugin.admin_notifications.prev', false);
           rcmail.admin_notifications_mark_all();
-          
+
           return false;
       }, true);
       $('.notification_slide').first().addClass('current');
-      
+
     }
   }
 });
-
