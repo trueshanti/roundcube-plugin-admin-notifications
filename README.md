@@ -38,7 +38,7 @@ Then, import the database script:
 
 If you are using git, change your working directory to your Rouncdube `plugins/` folder and clone the repository:
 
-    $ git clone git@github.com:valarauco/roundcube-plugin-admin-notifications.git admin-notifications
+    $ git clone https://github.com/valarauco/roundcube-plugin-admin-notifications.git admin-notifications
 
 Then you can checkout the branch or release you want to use.
 
